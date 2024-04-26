@@ -81,6 +81,7 @@ runs:
           --x-manifest-root=${{ github.workspace }}/scripts/vcpkg-manifest `
           --x-install-root=./installed `
           --triplet=${{ env.VCPKG_TRIPLET }}
+        cat buildtrees/qmsetup/config-x64-osx-out.log
         if (Test-Path -Path buildtrees) {
           Remove-Item -Path buildtrees -Recurse -Force
         }
